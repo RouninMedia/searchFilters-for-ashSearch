@@ -7,7 +7,7 @@ ____
 
 ## Examples of searchFilters for `ashSearch`
 
-**searchFilters** are `JSON` strings.
+**searchFilters** for `ashSearch` are `JSON` strings.
 
 To illustrate the format of **searchFilters** for `ashSearch`, here are some real-world examples of **searchFilters**:
 
