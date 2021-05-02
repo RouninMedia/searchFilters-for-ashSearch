@@ -14,7 +14,7 @@ To illustrate the format of **searchFilters** for `ashSearch`, here are some rea
 ### Example 1
 **searchFilters** which exclude German, Spanish, French and Russian language content and only include the index page of the `/safety-data-sheets/` folder:
 
-```
+```json
 {
   "Exclude_Folders": {
     "de": {},
@@ -37,7 +37,7 @@ _____
 ### Example 2
 **searchFilters** which include only German language content and only include the index page of the `/sicherheitsdatenblätter/` folder:
 
-```
+```json
 {
   "Include_Folders": {
     "de": {
@@ -60,7 +60,7 @@ _____
 ### Example 3
 **searchFilters** which include only Spanish language content and only include the index page of the `/hojas-de-datos-de-seguridad/` folder:
 
-```
+```json
 {
   "Include_Folders": {
     "es": {
@@ -118,7 +118,7 @@ ____
 
 The **`Refine_Page_List()`** contains both the `Process_Exclude_Folders()` and the `Process_Include_Folders()` functions:
 
-```
+```php
 function Refine_Page_List($Page_List_Array, $Search_Filters_JSON) {
 
   $Path = $_SERVER['DOCUMENT_ROOT'].'/.assets/content/pages/';
