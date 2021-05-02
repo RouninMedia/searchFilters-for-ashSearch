@@ -82,19 +82,19 @@ _____
 
 ## Explanation of searchFilters Formatting
 
-  1) The root level of the **searchFilters** contains a single directive, either:
-    i) `Include_Folders`
-    ii) `Exclude_Folders`
+ - The root level of the **searchFilters** contains a single directive, either:
+   - `Include_Folders`
+   - `Exclude_Folders`
 
-  2) This single directive contains a list of one or more named folders, each with its own **Exceptions Object**
+ - This single directive contains a list of one or more named folders, each with its own **Exceptions Object**
   
-  3) Every **Exceptions Object** contains either:
-    i) *a single directive*
-    ii) no directives at all
+ - Every **Exceptions Object** contains either:
+   - *a single directive*
+   - no directives at all
   
-  If the **Exceptions Object** contains a single directive, it is *always* the opposite of the current directive.
+ - If the **Exceptions Object** contains a single directive, it is *always* the opposite of the current directive.
 
-  4) If the **Exceptions Object** is empty, the current directive (`Include_Folders` or `Exclude_Folders`) applies to the folder root and all subfolders
+ - If the **Exceptions Object** is empty, the current directive (`Include_Folders` or `Exclude_Folders`) applies to the folder root and all subfolders
   
   
 
