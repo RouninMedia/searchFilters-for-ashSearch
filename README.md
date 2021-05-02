@@ -30,6 +30,8 @@ To illustrate the syntax of **searchFilters** for `ashSearch`, here are some rea
 
 **Minified:** `{"Exclude_Folders":{"de":{},"es":{},"fr":{},"ru":{},"safety-data-sheets":{"Include_Folders":{"/":{}}}}}`
 
+_____
+
 ### Example 2
 **searchFilters** which include only German language content and only include the index page of the `/sicherheitsdatenblätter/` folder:
 
@@ -50,6 +52,8 @@ To illustrate the syntax of **searchFilters** for `ashSearch`, here are some rea
 ```
 
 **Minified:** `{"Include_Folders":{"de":{"Exclude_Folders":{"sicherheitsdatenblätter":{"Include_Folders":{"/":{}}}}}}}`
+
+_____
 
 ### Example 3
 **searchFilters** which include only Spanish language content and only include the index page of the `/hojas-de-datos-de-seguridad/` folder:
