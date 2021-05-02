@@ -5,9 +5,78 @@
 
 ____
 
+## Examples of searchFilters for `ashSearch`
+
+To illustrate the syntax of **searchFilters** for `ashSearch`, here are some real-world examples of **searchFilters**:
+
+### Example 1
+**searchFilters** which exclude German, Spanish, French and Russian language content and only include the index page of the `/safety-data-sheets/` folder:
+
+```
+{
+  "Exclude_Folders": {
+    "de": {},
+    "es": {},
+    "fr": {},
+    "ru": {},
+    "safety-data-sheets": {
+      "Include_Folders": {
+        "/": {}
+      }
+    }
+  }
+}
+```
+
+**Minified:** `{"Exclude_Folders":{"de":{},"es":{},"fr":{},"ru":{},"safety-data-sheets":{"Include_Folders":{"/":{}}}}}`
+
+### Example 2
+**searchFilters** which include only German language content and only include the index page of the `/sicherheitsdatenblätter/` folder:
+
+```
+{
+  "Include_Folders": {
+    "de": {
+      "Exclude_Folders": {
+        "sicherheitsdatenblätter": {
+          "Include_Folders": {
+            "/": {}
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Minified:** `{"Include_Folders":{"de":{"Exclude_Folders":{"sicherheitsdatenblätter":{"Include_Folders":{"/":{}}}}}}}`
+
+### Example 3
+**searchFilters** which include only Spanish language content and only include the index page of the `/hojas-de-datos-de-seguridad/` folder:
+
+```
+{
+  "Include_Folders": {
+    "es": {
+      "Exclude_Folders": {
+        "hojas-de-datos-de-seguridad": {
+          "Include_Folders": {
+            "/": {}
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Minified:** `{"Include_Folders":{"es":{"Exclude_Folders":{"hojas-de-datos-de-seguridad":{"Include_Folders":{"/":{}}}}}}}`
+
+____
+
 ## `Refine_Page_List()` function
 
-The **`Refine_Page_List()`** contains both the `Process_Exclude_Folders()` and the `Process_Include_Folders()` functions.
+The **`Refine_Page_List()`** contains both the `Process_Exclude_Folders()` and the `Process_Include_Folders()` functions:
 
 ```
 function Refine_Page_List($Page_List_Array, $Search_Filters_JSON) {
