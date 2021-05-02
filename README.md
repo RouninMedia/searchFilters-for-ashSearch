@@ -91,7 +91,7 @@ The value of the parameter `$Search_Filters_JSON` is either:
 
  - assigned directly
  - retrieved from the queryString parameter `filters` (which supersedes direct assignation)
- - set to the default value (`[]`)  if the value is neither assigned directly nor available to retrieve from the queryString
+ - set to the default value (`[]`)  if the value is neither available to retrieve from the queryString, nor assigned directly
 
 **Example:**
 
