@@ -95,7 +95,7 @@ The value of the parameter `$Search_Filters_JSON` is either:
 
 **Example:**
 
-```
+```php
 // VALUE ASSIGNED DIRECTLY
 $Search_Filters_JSON = '{"Exclude_Folders":{"de":{},"es":{},"fr":{},"ru":{},"safety-data-sheets":{"Include_Folders":{"/":{}}}}}';
 
