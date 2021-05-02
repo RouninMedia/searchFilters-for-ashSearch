@@ -83,14 +83,12 @@ _____
 ## Explanation of searchFilters Formatting
 
   1) The root level of the **searchFilters** contains a single directive, either:
-    
     i) `Include_Folders`
     ii) `Exclude_Folders`
 
   2) This single directive contains a list of one or more named folders, each with its own **Exceptions Object**
   
   3) Every **Exceptions Object** contains either:
-   
     i) *a single directive*
     ii) no directives at all
   
