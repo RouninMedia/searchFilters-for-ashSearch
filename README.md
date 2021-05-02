@@ -96,14 +96,20 @@ The value of the parameter `$Search_Filters_JSON` is either:
 **Example:**
 
 ```
+// VALUE ASSIGNED DIRECTLY
 $Search_Filters_JSON = '{"Exclude_Folders":{"de":{},"es":{},"fr":{},"ru":{},"safety-data-sheets":{"Include_Folders":{"/":{}}}}}';
 
+// VALUE RETRIEVED FROM QUERYSTRING PARAMETER ?filters=
 if ((isset($_GET['filters'])) && (!is_null(json_decode($_GET['filters'])))) {
 
   $Search_Filters_JSON = $_GET['filters'];
 }
 
+// IF VALUE NOT SET, SET DEFAULT VALUE
 $Search_Filters_JSON = $Search_Filters_JSON ?? '[]';
+
+// INVOKE FUNCTION
+Refine_Page_List($Page_List_Array, $Search_Filters_JSON)
 ```
 
 ____
