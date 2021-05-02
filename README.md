@@ -82,29 +82,35 @@ _____
 
 ## Explanation of searchFilters Formatting
 
-  1)The root level of the **searchFilters** contains a single directive: either **Include_Folders** or **Exclude_Folders**
+  1) The root level of the **searchFilters** contains a single directive, either:
+    
+   i) `Include_Folders`
+   ii) `Exclude_Folders`
 
-  1) At each *filter level*, inside the Exceptions you EITHER:
+  2) This single directive contains a list of one or more named folders, each with its own **Exceptions Object**
   
-   i) have an Include_Folders Directive
-   ii) have an Exclude_Folders Directive
-   iii) you have no Directives
-
-  ie. You can have no directives, but you can never have more than a single directive.
-
-  2) If you have an empty array, the parent directive (Include or Exclude) applies to everything in that folder
-
-  3) If you have an Include_Folders Directive then ONLY the direct subchild folders named are to be INCLUDED 
-
-  4) If you have an Exclude_Folders Directive then ALL the direct subchild folders named are to be EXCLUDED
-
-  5) Further Exclude_Folders Directives may be nested inside an Include_Folders Directive;
+  3) Every **Exceptions Object** contains either:
+   
+   i) *a single directive*
+   ii) no directives at all
   
-  6) Further Include_Folders  Directives may be nested inside an Exclude_Folders Directive;
+  If the **Exceptions Object** contains a single directive, it is *always* the opposite of the current directive.
 
-  7) In any Directive, the shorthand "/" means THE ROOT of THIS FOLDER
+  4) If the **Exceptions Object** is empty, the current directive (`Include_Folders` or `Exclude_Folders`) applies to the folder root and all subfolders
+  
+  
 
-  8) In any Directive, the shorthand "*" means ALL SUBFOLDERS of THIS FOLDER
+  5) If you have an Include_Folders Directive then ONLY the direct subchild folders named are to be INCLUDED 
+
+  6) If you have an Exclude_Folders Directive then ALL the direct subchild folders named are to be EXCLUDED
+
+  7) Further Exclude_Folders Directives may be nested inside an Include_Folders Directive;
+  
+  8) Further Include_Folders  Directives may be nested inside an Exclude_Folders Directive;
+
+  9) In any Directive, the shorthand "/" means THE ROOT of THIS FOLDER
+
+  10) In any Directive, the shorthand "*" means ALL SUBFOLDERS of THIS FOLDER
 
 ____
 
