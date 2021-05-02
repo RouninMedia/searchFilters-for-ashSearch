@@ -6,7 +6,8 @@
 ____
 
 ## `Refine_Page_List()` function
-### (containing both `Process_Exclude_Folders()` and `Process_Include_Folders()` functions)
+
+The **`Refine_Page_List()`** contains both the `Process_Exclude_Folders()` and the `Process_Include_Folders()` functions.
 
 ```
 function Refine_Page_List($Page_List_Array, $Search_Filters_JSON) {
