@@ -78,6 +78,34 @@ _____
 
 **Minified:** `{"Include_Folders":{"es":{"Exclude_Folders":{"hojas-de-datos-de-seguridad":{"Include_Folders":{"/":{}}}}}}}`
 
+_____
+
+## Explanation of searchFilters Formatting
+
+  1)The root level of the **searchFilters** contains a single directive: either **Include_Folders** or **Exclude_Folders**
+
+  1) At each *filter level*, inside the Exceptions you EITHER:
+  
+   i) have an Include_Folders Directive
+   ii) have an Exclude_Folders Directive
+   iii) you have no Directives
+
+  ie. You can have no directives, but you can never have more than a single directive.
+
+  2) If you have an empty array, the parent directive (Include or Exclude) applies to everything in that folder
+
+  3) If you have an Include_Folders Directive then ONLY the direct subchild folders named are to be INCLUDED 
+
+  4) If you have an Exclude_Folders Directive then ALL the direct subchild folders named are to be EXCLUDED
+
+  5) Further Exclude_Folders Directives may be nested inside an Include_Folders Directive;
+  
+  6) Further Include_Folders  Directives may be nested inside an Exclude_Folders Directive;
+
+  7) In any Directive, the shorthand "/" means THE ROOT of THIS FOLDER
+
+  8) In any Directive, the shorthand "*" means ALL SUBFOLDERS of THIS FOLDER
+
 ____
 
 ## Invoking the `Refine_Page_List()` function
