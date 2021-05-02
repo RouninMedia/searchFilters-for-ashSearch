@@ -94,21 +94,19 @@ _____
   
  - If the **Exceptions Object** contains a single directive, it is *always* the opposite of the current directive.
 
- - If the **Exceptions Object** is empty, the current directive (`Include_Folders` or `Exclude_Folders`) applies to the folder root and all subfolders
+ - If the **Exceptions Object** is empty, the current directive (`Include` or `Exclude`) applies to the root and all subfolders of the current named folder
   
-  
+ - If the **Exceptions Object** contains an `Include_Folders` Directive then **only** the named subfolders in the immediately following list are to be **included**
+ 
+ - If the **Exceptions Object** contains an `Exclude_Folders` Directive then **all** the named subfolders in the immediately following list are to be **excluded**  
 
-  5) If you have an Include_Folders Directive then ONLY the direct subchild folders named are to be INCLUDED 
+ - Further `Exclude_Folders` Directives may be nested inside an **Exceptions Object** inside an `Include_Folders` Directive
+ 
+ - Further `Include_Folders` Directives may be nested inside an **Exceptions Object** inside an `Exclude_Folders` Directive
 
-  6) If you have an Exclude_Folders Directive then ALL the direct subchild folders named are to be EXCLUDED
+ - In *either* Directive, the shorthand `/` indicates **the root** of the current named folder
 
-  7) Further Exclude_Folders Directives may be nested inside an Include_Folders Directive;
-  
-  8) Further Include_Folders  Directives may be nested inside an Exclude_Folders Directive;
-
-  9) In any Directive, the shorthand "/" means THE ROOT of THIS FOLDER
-
-  10) In any Directive, the shorthand "*" means ALL SUBFOLDERS of THIS FOLDER
+ - In *either* Directive, the shorthand `*` indicates **all** the subfolders of the current named folder
 
 ____
 
