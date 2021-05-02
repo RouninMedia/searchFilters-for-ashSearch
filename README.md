@@ -78,6 +78,34 @@ _____
 
 ____
 
+## Invoking the `Refine_Page_List()` function
+
+The `Refine_Page_List()` function has two required parameters:
+
+ - `$Page_List_Array`
+ - `$Search_Filters_JSON`
+
+The value of the parameter `$Search_Filters_JSON` is either:
+
+ - assigned directly
+ - retrieved from the queryString parameter `filters` (which supersedes direct assignation)
+ - set to the default value (`[]`)  if the value is neither assigned directly nor available to retrieve from the queryString
+
+**Example:**
+
+```
+$Search_Filters_JSON = '{"Exclude_Folders":{"de":{},"es":{},"fr":{},"ru":{},"safety-data-sheets":{"Include_Folders":{"/":{}}}}}';
+
+if ((isset($_GET['filters'])) && (!is_null(json_decode($_GET['filters'])))) {
+
+  $Search_Filters_JSON = $_GET['filters'];
+}
+
+$Search_Filters_JSON = $Search_Filters_JSON ?? '[]';
+```
+
+____
+
 ## `Refine_Page_List()` function
 
 The **`Refine_Page_List()`** contains both the `Process_Exclude_Folders()` and the `Process_Include_Folders()` functions:
