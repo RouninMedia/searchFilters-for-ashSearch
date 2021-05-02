@@ -7,7 +7,9 @@ ____
 
 ## Examples of searchFilters for `ashSearch`
 
-To illustrate the syntax of **searchFilters** for `ashSearch`, here are some real-world examples of **searchFilters**:
+**searchFilters** are `JSON` strings.
+
+To illustrate the format of **searchFilters** for `ashSearch`, here are some real-world examples of **searchFilters**:
 
 ### Example 1
 **searchFilters** which exclude German, Spanish, French and Russian language content and only include the index page of the `/safety-data-sheets/` folder:
