@@ -12,7 +12,7 @@ ____
 To illustrate the format of **searchFilters** for `ashSearch`, here are some real-world examples of **searchFilters**:
 
 ### Example 1
-**searchFilters** which exclude German, Spanish, French and Russian language content and only include the index page at the root of the `/safety-data-sheets/` folder:
+**searchFilters** which *exclude* German, Spanish, French and Russian language folders and only *include* the index page at the root of the `/safety-data-sheets/` folder:
 
 ```json
 {
@@ -35,7 +35,7 @@ To illustrate the format of **searchFilters** for `ashSearch`, here are some rea
 _____
 
 ### Example 2
-**searchFilters** which include only German language content and only include the index page at the root of the `/sicherheitsdatenblätter/` folder:
+**searchFilters** which *include* only the German language folder and only *include* the index page at the root of the `/sicherheitsdatenblätter/` folder:
 
 ```json
 {
@@ -58,7 +58,7 @@ _____
 _____
 
 ### Example 3
-**searchFilters** which include only Spanish language content and only include the index page at the root of the `/hojas-de-datos-de-seguridad/` folder:
+**searchFilters** which *include* only the Spanish language folder and only *include* the index page at the root of the `/hojas-de-datos-de-seguridad/` folder:
 
 ```json
 {
