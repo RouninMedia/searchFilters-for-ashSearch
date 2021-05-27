@@ -1,15 +1,15 @@
-# searchFilters for ashSearch
-**`searchFilters`** enable `ashSearch` to include or exclude in its search any folders at any level of site folder hierarchy.
+# searchFilters for ashSiteSearch
+**`searchFilters`** enable `ashSiteSearch` to include or exclude in its search any folders at any level of site folder hierarchy.
 
-**`searchFilters`** are a core component of `ashSearch`.
+**`searchFilters`** are a core component of `ashSiteSearch`.
 
 ____
 
-## Examples of searchFilters for `ashSearch`
+## Examples of searchFilters for `ashSiteSearch`
 
-**searchFilters** for `ashSearch` are `JSON` strings.
+**searchFilters** for `ashSiteSearch` are `JSON` strings.
 
-To illustrate the format of **searchFilters** for `ashSearch`, here are some real-world examples of **searchFilters**:
+To illustrate the format of **searchFilters** for `ashSiteSearch`, here are some real-world examples of **searchFilters**:
 
 ### Example 1
 **searchFilters** which *exclude* German, Spanish, French and Russian language folders and only *include* the index page at the root of the `/safety-data-sheets/` folder:
@@ -258,8 +258,8 @@ ____
 
 ## Background Information...
 
-### What is `ashSearch`?
-`ashSearch` is the standard Search Module in `ash`.
+### What is `ashSiteSearch`?
+`ashSiteSearch` is the standard Search Module in `ash`.
 
 
 ### What is `ash`?
